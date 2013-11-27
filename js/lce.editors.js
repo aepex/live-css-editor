@@ -146,6 +146,16 @@
         });
      });
 
+    //text-transform
+    $.fn.livecsseditor.setPropertyEditor(['text-transform'], function positionEditorCallback(options) {
+        var html = '<form class="form-inline"><select><option value="none">&lt;none&gt;</option><option value="capitalize">Capitalize</option><option value="uppercase">UPPERCASE</option><option value="lowercase">lowercase</option></select><a class="btn" href="#"><i class=" icon-ok"></i></a></form>';
+        options.container.html(html);
+        options.container.find('a.btn').click(function() {
+            options.setValue(options.container.find('select').val());
+            return false;
+        });
+     });
+
     //display
     $.fn.livecsseditor.setPropertyEditor(['display'], function positionEditorCallback(options) {
         var html = '<form class="form-inline"><select><option value="inline">inline</option><option value="block">block</option><option value="none">none</option></select><a class="btn" href="#"><i class=" icon-ok"></i></a></form>';
