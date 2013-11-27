@@ -34,7 +34,7 @@
                             name: 'Invoice Page',
                             def: {
                                 '.paidon': {
-                                    name: 'Payment Status (Paid &amp; Unpaid)',
+                                    name: 'Payment Status',
                                     props: ['color', 'font-family', 'font-size']
                                 },
                                 '#invoice-details-holder h2': {
@@ -46,15 +46,19 @@
                                     props: ['color', 'font-family', 'font-size']
                                 },
                                 '#company-info-holder h2': {
-                                    name: 'Company Name',
+                                    name: 'Your Company Name',
                                     props: ['color', 'font-family', 'font-size']
                                 },
                                 '#billing-info h2': {
                                     name: 'Billing Info &ndash; Company Name',
                                     props: ['color', 'font-family', 'font-size']
                                 },
+                                'table#billing-table h3': {
+                                  name: 'Billing Info &ndash; Description Header',
+                                  props: ['color', 'font-family', 'font-size']
+                                },
                                 '#billing-info p': {
-                                    name: 'Billing Info &ndash; Client Name',
+                                    name: 'Billing Info &ndash; Text',
                                     props: ['color', 'font-family', 'font-size']
                                 },
                                 '#content table thead th': {
