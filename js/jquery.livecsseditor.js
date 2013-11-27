@@ -144,8 +144,8 @@
                 properties.find('.collapse').on('show', function () {
                     var selected = preview.contents().find($(this).data('selector'));
                     var selectedBgColor = selected.css('background-color');
-                    selected.animate({'background-color':'yellow'},500,function(){
-                        $(this).css('background-color',selectedBgColor);
+                    selected.animate({'background-color':'yellow'},1000,function(){
+                        $(this).animate({'background-color':selectedBgColor},1000);
                     });
                 });
             });            

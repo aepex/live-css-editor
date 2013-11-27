@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Invoice - v3</title>
+    <meta name="robots" content="noindex,nofollow" />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <link rel="shortcut icon" href="" />
+    <link rel="stylesheet" type="text/css" href="css/invoice_style.css">
+    <link href='http://fonts.googleapis.com/css?family=Cabin:400,700&amp;subset=latin&amp;v2' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Copse&amp;subset=latin&amp;v2' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+</head>
+
+<body class="invoice not-pdf">
+
+    <div id="buttonBar">
+        <div id="buttonHolders">
+            <a href="#" class="button">Go to Client Area &rarr;</a>
+            <div id="pdf">
+                <a href="#" title="Download PDF" id="download_pdf" class="button">Download PDF</a>
+            </div>
+            <span class="paidon">This invoice hasn't been paid yet.</span>
+        </div>
+    </div>
+
+    <div id="wrapper">
+    <div id="header">
+        <div id="envelope"  style="padding:60px 0 0 0" >
+            <table cellspacing="0" cellpadding="0" style="padding: 0 0px;">
+                <tr>
+                    <td style="text-align:left;vertical-align:bottom;" id="company-info-holder"><h2 class='logo'>Clever Example Co.</h2>
+                        <p></p></td>
+                    <td width="300px" style="text-align:right; vertical-align:top;" class="tight" id="invoice-details-holder"><div id="details-wrap">
+                            <p>Invoice #x91465
+                            <h2>Invoice</h2>
+                            <p>Invoice Date: 11/27/2013</p>
+                            <p>Due: 01/26/2014</p>
+                            </p>
+                        </div>
+                        <!-- /details-wrap --></td>
+                </tr>
+            </table>
+        </div>
+        <!-- /envelope -->
+        
+        <div id="clientInfo">
+            <div id="billing-info">
+                <table cellspacing="0" cellpadding="0" id="billing-table">
+                    <tr>
+                        <td width="240px" style="vertical-align:top;"><h2>AVC Company</h2>
+                            <p>Bill Smith<br />
+                                555 Anystreet</p></td>
+                        <td width="560px"  style="vertical-align:top;"><h3>Description:</h3>
+                            <p>This is the invoice description.</p></td>
+                    </tr>
+                </table>
+                <br />
+                <br />
+            </div>
+        </div>
+        <!-- /clientInfo --> 
+        
+    </div>
+    <!-- /header -->
+    <div id="content">
+        <table id="" cellspacing="0" cellpadding="0">
+            <thead>
+                <tr>
+                    <th class="column_1" style="text-align:left">Description </th>
+                    <th class="column_2">Time/Quantity</th>
+                    <th class="column_3">Rate (USD)</th>
+                    <th class="column_4">Taxable</th>
+                    <th class="column_5">Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="border-top">
+                    <td colspan="5"><div id="border-holder-top"> </div>
+                        <!-- /border-holder-top --></td>
+                </tr>
+                <!-- /top-border -->
+                <tr class=" invoice-desc-row">
+                    <td class="column_1"><img src="http://pancakeapp.com/demo/third_party/themes/pancake/img/bg-invoice-arrow.gif?3610" /> Line Item 1</td>
+                    <td class="column_2">1</td>
+                    <td class="column_3">$100.00</td>
+                    <td class="column_4">N</td>
+                    <td class="column_5 total-values">$100.00</td>
+                </tr>
+                <tr class="border-bottom">
+                    <td colspan="5"><div id="border-holder-bottom"> </div>
+                        <!-- /border-holder-bottom --></td>
+                </tr>
+                <tr class="invoice-item-notes">
+                    <td colspan="5">Extra description</td>
+                </tr>
+                <tr class="border-top">
+                    <td colspan="5"><div id="border-holder-top"> </div>
+                        <!-- /border-holder-top --></td>
+                </tr>
+                <!-- /top-border -->
+                <tr class="alt invoice-desc-row">
+                    <td class="column_1"><img src="http://pancakeapp.com/demo/third_party/themes/pancake/img/bg-invoice-arrow.gif?3610" /> Line Item 2</td>
+                    <td class="column_2">10</td>
+                    <td class="column_3">$10.00</td>
+                    <td class="column_4">N</td>
+                    <td class="column_5 total-values">$100.00</td>
+                </tr>
+                <tr class="border-bottom">
+                    <td colspan="5"><div id="border-holder-bottom"> </div>
+                        <!-- /border-holder-bottom --></td>
+                </tr>
+                <tr class="invoice-item-notes">
+                    <td colspan="5">Extra description</td>
+                </tr>
+                <tr class="border-top">
+                    <td colspan="5"><div id="border-holder-top"> </div>
+                        <!-- /border-holder-top --></td>
+                </tr>
+                <!-- /top-border -->
+                <tr class=" invoice-desc-row">
+                    <td class="column_1"><img src="http://pancakeapp.com/demo/third_party/themes/pancake/img/bg-invoice-arrow.gif?3610" /> Line Item 3</td>
+                    <td class="column_2">100</td>
+                    <td class="column_3">$1.00</td>
+                    <td class="column_4">N</td>
+                    <td class="column_5 total-values">$100.00</td>
+                </tr>
+                <tr class="border-bottom">
+                    <td colspan="5"><div id="border-holder-bottom"> </div>
+                        <!-- /border-holder-bottom --></td>
+                </tr>
+                <tr class="border-top">
+                    <td colspan="5"><div id="border-holder-top"> </div>
+                        <!-- /border-holder-top --></td>
+                </tr>
+                <!-- /top-border -->
+                <tr class="alt invoice-desc-row">
+                    <td class="column_1"><img src="http://pancakeapp.com/demo/third_party/themes/pancake/img/bg-invoice-arrow.gif?3610" /> Line Item 4</td>
+                    <td class="column_2">1000</td>
+                    <td class="column_3">$0.10</td>
+                    <td class="column_4">N</td>
+                    <td class="column_5 total-values">$100.00</td>
+                </tr>
+                <tr class="border-bottom">
+                    <td colspan="5"><div id="border-holder-bottom"> </div>
+                        <!-- /border-holder-bottom --></td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr class="Im-sorry-for-this">
+                    <td colspan="5"><h2 class="main-header-style orange" id="payment-plan-header">Payment Plan</h2>
+                        <div class="payment-plan">
+                            <ol>
+                                <li>
+                                    <p> <span class="amount">$200.00</span> due on <span class="dueon">12/26/2013</span> - First payment &raquo; </p>
+                                </li>
+                                <li>
+                                    <p> <span class="amount">$200.00</span> due on <span class="dueon">01/26/2014</span> - Final payment &raquo; </p>
+                                </li>
+                            </ol>
+                        </div>
+                        <div class="really-I-am"></div></td>
+                        </td>
+                <tr>
+                    <td colspan="3" rowspan="5" class="invoice-notes" style=" vertical-align:top;"><h3>Notes:</h3>
+                        <p>Extra Notes</p></td>
+                    <td class="total-heading">Subtotal:</td>
+                    <td class="total-values">$400.00</td>
+                </tr>
+                <tr dontbreak="true">
+                    <td class="total-heading">Total Tax:</td>
+                    <td class="total-values">$0.00</td>
+                </tr>
+                <tr dontbreak="true" class="invoice-total">
+                    <td class="total-heading" style=" vertical-align:top;">Total:</td>
+                    <td class="total-values" style=" vertical-align:top;">$400.00</td>
+                </tr>
+                <tr dontbreak="true">
+                    <td colspan="2"  class="invoice-due-on">Due: 01/26/2014</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+    <!-- /content -->
+    <div id="footer"> </div>
+    <!-- /footer --> 
+</div>
+
+</body>
+</html>

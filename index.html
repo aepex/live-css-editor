@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Live CSS Editor</title>       
+        <title>Pancake Themer</title>
         <script src="js/jquery-1.7.1.min.js"></script>
         <script src="js/microtpl.js"></script>
         <!-- lce itself -->
@@ -16,37 +16,107 @@
         <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
         <!-- jquery ui -->
         <link rel="stylesheet" type="text/css" href="plugins/jquery-ui-1.9.1/css/smoothness/jquery-ui-1.9.1.custom.min.css"  media="screen">
-        <script src="plugins/jquery-ui-1.9.1/js/jquery-ui-1.9.1.custom.min.js"></script>             
+        <script src="plugins/jquery-ui-1.9.1/js/jquery-ui-1.9.1.custom.min.js"></script>
     </head>
     <body>
-        <div class="page-header">
-            <h1>Live CSS Editor <small>Customize your page design with live preview tool</small></h1>
-            <button class="btn" id="cssBtn">Get custom CSS</button>
+        <div class="page-header" style="margin-left:20px">
+            <h1>Pancake Themer <small>Customize your pancake design</small></h1>
+            <p>This tool helps make basic style adjustments to Pancake's default theme. It hasn't been tested much, so use at your own risk!</p>
+            <button class="btn btn-primary" role="button" id="cssBtn">Get CSS</button><br>
+            <textarea id="output" style="width:98%; font-family:Consolas; font-size:11px; height:100px; overflow:auto; display:none"></textarea>
         </div>        
-        <div class="container-fluid" id="lce"></div>        
+        <div class="container-fluid" id="lce"></div>
         <script>
             $(document).ready(function(){
                 $('#lce').livecsseditor({
                     pages: {
-                        'demo/index.html': {
-                            name: 'Demo page',
+                        'demo/invoice.html': {
+                            name: 'Invoice Page',
                             def: {
-                                'h1':{
-                                    name: 'Heading',
-                                    props:['color','background-color']
+                                '.paidon': {
+                                    name: 'Payment Status (Paid &amp; Unpaid)',
+                                    props: ['color', 'font-family', 'font-size']
                                 },
-                                'p,span':{
-                                    name: 'Text',
-                                    props:['font-size','color']
+                                '#invoice-details-holder h2': {
+                                    name: 'Header &ndash; INVOICE',
+                                    props: ['color', 'font-family', 'font-size', 'margin-top', 'margin-bottom', 'text-transform']
                                 },
-                                'div.drag':{
-                                    name:'Floating element',
-                                    props:['left','top']
+                                '#invoice-details-holder p': {
+                                    name: 'Header &ndash; Text',
+                                    props: ['color', 'font-family', 'font-size']
                                 },
-                                'div.drag2':{
-                                    name:'Floating element 2',
-                                    props:['left','top','width','height']
-                                }                                
+                                '#company-info-holder h2': {
+                                    name: 'Company Name',
+                                    props: ['color', 'font-family', 'font-size']
+                                },
+                                '#billing-info h2': {
+                                    name: 'Billing Info &ndash; Company Name',
+                                    props: ['color', 'font-family', 'font-size']
+                                },
+                                '#billing-info p': {
+                                    name: 'Billing Info &ndash; Client Name',
+                                    props: ['color', 'font-family', 'font-size']
+                                },
+                                '#content table thead th': {
+                                    name: 'Table &ndash; Column Headers',
+                                    props: ['color', 'font-family', 'font-size']
+                                },
+                                '#content tr.invoice-desc-row': {
+                                    name: 'Line Item Row',
+                                    props: ['background-color']
+                                },
+                                '#content tr.invoice-desc-row td.column_1': {
+                                    name: 'Line Item &ndash; Description',
+                                    props: ['color', 'font-family', 'font-size', 'text-indent']
+                                },
+                                '#content tr.invoice-desc-row td.column_1 img': {
+                                    name: 'Line Item &ndash; Description Caret ( &rsaquo; )',
+                                    props: ['display']
+                                },
+                                '#content tr.invoice-desc-row td.column_2': {
+                                    name: 'Line Item &ndash; Time/Quantity',
+                                    props: ['color', 'font-family', 'font-size']
+                                },
+                                '#content tr.invoice-desc-row td.column_3': {
+                                    name: 'Line Item &ndash; Rate',
+                                    props: ['color', 'font-family', 'font-size']
+                                },
+                                '#content tr.invoice-desc-row td.column_4': {
+                                    name: 'Line Item &ndash; Taxable',
+                                    props: ['color', 'font-family', 'font-size']
+                                },
+                                '#content tr.invoice-desc-row td.total-values': {
+                                    name: 'Line Item &ndash; Total',
+                                    props: ['color', 'font-family', 'font-size', 'font-weight']
+                                },
+                                '#content .invoice-item-notes td': {
+                                    name: 'Line Item &ndash; Notes',
+                                    props: ['color', 'font-family', 'font-size', 'text-indent', 'background-color']
+                                },
+                                '#content tfoot h3': {
+                                    name: 'Footer &ndash; Headers (Taxes/Notes)',
+                                    props: ['color', 'font-family', 'font-size', 'font-weight']
+                                },
+                                '#content tfoot .total-heading': {
+                                    name: 'Subtotal &ndash; Labels',
+                                    props: ['color', 'font-family', 'font-size', 'font-weight', 'border-bottom']
+                                },
+                                '#content tfoot .total-values': {
+                                    name: 'Subtotal &ndash; Values',
+                                    props: ['color', 'font-family', 'font-size', 'font-weight', 'border-bottom']
+                                },
+                                '#content tfoot tr.invoice-total': {
+                                    name: 'Invoice Total (Box)',
+                                    props: ['background-color']
+                                },
+                                '#content tfoot tr.invoice-total td': {
+                                    name: 'Invoice Total (Text)',
+                                    props: ['color', 'font-family', 'font-size', 'font-weight']
+                                },
+                                '#content tfoot td.invoice-due-on': {
+                                    name: 'Due Date',
+                                    props: ['color', 'font-family', 'font-size', 'font-weight']
+                                }
                             }
                         },
                         'demo/second.html': {
@@ -64,11 +134,11 @@
                         }
                     }
                 });
-                //css button
-                $('#cssBtn').click(function(){
-                    alert($('#lce').livecsseditor('getCss',{pagePath:'demo/index.html'}));
+                $('#cssBtn').click(function() {
+                    $('#output').val($('#lce').livecsseditor('getCss')).slideDown();
                 });
             });
         </script>
+
     </body>
 </html>
