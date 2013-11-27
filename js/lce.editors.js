@@ -130,6 +130,7 @@
     $.fn.livecsseditor.setPropertyEditor(['font-weight'], function positionEditorCallback(options) {
         var html = '<form class="form-inline"><select><option value="normal">normal</option><option value="bold">bold</option></select><a class="btn" href="#"><i class=" icon-ok"></i></a></form>';
         options.container.html(html);
+        options.container.find('select').val(options.value);
         options.container.find('a.btn').click(function() {
             options.setValue(options.container.find('select').val());
             return false;
@@ -138,8 +139,9 @@
 
     //font-family
     $.fn.livecsseditor.setPropertyEditor(['font-family'], function positionEditorCallback(options) {
-        var html = '<form class="form-inline"><select><option value="inherit">&lt;inherit default&gt;</option><option value="\'Copse\', serif">Copse</option><option value="\'Droid Sans\', sans-serif">Droid Sans</option><option value="Helvetica, Arial, sans-serif">Helvetica / Arial</option><option value="Georgia, \'Times New Roman\', Times, serif">Georgia</option><option value="Consolas, \'Courier New\', Courier, monospace">Consolas / Courier</option></select><a class="btn" href="#"><i class=" icon-ok"></i></a></form>';
+        var html = '<form class="form-inline"><select><option value="inherit">&lt;inherit default&gt;</option><option value="Copse, serif">Copse</option><option value="\'Droid Sans\', sans-serif">Droid Sans</option><option value="helvetica">Helvetica</option><option value="Georgia, \'Times New Roman\', Times, serif">Georgia</option><option value="Consolas, \'Courier New\', Courier, monospace">&lt;monospace&gt;</option></select><a class="btn" href="#"><i class=" icon-ok"></i></a></form>';
         options.container.html(html);
+        options.container.find('select').val(options.value);
         options.container.find('a.btn').click(function() {
             options.setValue(options.container.find('select').val());
             return false;
@@ -150,6 +152,7 @@
     $.fn.livecsseditor.setPropertyEditor(['text-transform'], function positionEditorCallback(options) {
         var html = '<form class="form-inline"><select><option value="none">&lt;none&gt;</option><option value="capitalize">Capitalize</option><option value="uppercase">UPPERCASE</option><option value="lowercase">lowercase</option></select><a class="btn" href="#"><i class=" icon-ok"></i></a></form>';
         options.container.html(html);
+        options.container.find('select').val(options.value);
         options.container.find('a.btn').click(function() {
             options.setValue(options.container.find('select').val());
             return false;
@@ -160,6 +163,7 @@
     $.fn.livecsseditor.setPropertyEditor(['display'], function positionEditorCallback(options) {
         var html = '<form class="form-inline"><select><option value="inline">inline</option><option value="block">block</option><option value="none">none</option></select><a class="btn" href="#"><i class=" icon-ok"></i></a></form>';
         options.container.html(html);
+        options.container.find('select').val(options.value);
         options.container.find('a.btn').click(function() {
             options.setValue(options.container.find('select').val());
             return false;
