@@ -66,11 +66,11 @@
                                     props: ['color', 'font-family', 'font-size']
                                 },
                                 'div#content table thead th': {
-                                    name: 'Table / Column Headers',
+                                    name: 'Table Column Headers',
                                     props: ['color', 'font-family', 'font-size']
                                 },
                                 'div#content tr.invoice-desc-row': {
-                                    name: 'Line Item Row',
+                                    name: 'Line Item &ndash; Row',
                                     props: ['background-color']
                                 },
                                 'div#content tr.invoice-desc-row td.column_1': {
@@ -102,11 +102,19 @@
                                     props: ['color', 'font-family', 'font-size', 'text-indent', 'background-color']
                                 },
                                 '#payment-plan-header': {
-                                    name: 'Payment Plan header',
+                                    name: 'Payment Plan &ndash; Header',
                                     props: ['color', 'font-family', 'font-size', 'font-weight']
                                 },
+                                '.payment-plan': {
+                                    name: 'Payment Plan &ndash; Base Text',
+                                    props: ['color', 'font-family', 'font-size', 'font-weight']
+                                },
+                                '.payment-plan .amount, .payment-plan .dueon': {
+                                    name: 'Payment Plan &ndash; Amount &amp; Due Date',
+                                    props: ['color', 'font-weight']
+                                },
                                 'div#content .payment-plan a': {
-                                    name: 'Payment Plan links',
+                                    name: 'Payment Plan &ndash; Links',
                                     props: ['color']
                                 },
                                 'div#content tfoot h3': {
@@ -151,7 +159,9 @@
                     }
                 });
                 $('#cssBtn').click(function() {
-                    $('#output').val($('#lce').livecsseditor('getCss')).slideDown();
+                    $('#output').val($('#lce').livecsseditor('getCss'));
+                    $('#output').val($('#output').val() + 'h2.orange {color:' + $('#properties-17 .property-list .prop-index-0 input').val() + ' !important;}'); // Override !important CSS on '.orange'
+                    $('#output').slideDown();
                 });
             });
         </script>

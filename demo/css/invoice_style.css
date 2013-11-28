@@ -541,7 +541,7 @@ p#work_desc {
     color: #555;
 }
 #content .payment-plan a {color: #D34517;}
- .orange {color: #D34517!important;}
+.orange {color: #D34517;}
 
 #content .file-to-download {background-repeat: no-repeat;padding-left: 24px;}
 #files {margin:20px 0 0 0}
