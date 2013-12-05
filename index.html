@@ -117,8 +117,16 @@
                                     name: 'Payment Plan &ndash; Links',
                                     props: ['color']
                                 },
-                                'div#content tfoot h3': {
-                                    name: 'Footer &ndash; Headers (Taxes/Notes)',
+                                'div#content tfoot h2, div#content tfoot h3': {
+                                    name: 'Footer &ndash; Headers',
+                                    props: ['color', 'font-family', 'font-size', 'font-weight']
+                                },
+                                'div#content tfoot .invoice-notes p': {
+                                    name: 'Footer &ndash; Text',
+                                    props: ['color', 'font-family', 'font-size', 'font-weight']
+                                },
+                                'div#files li': {
+                                    name: 'Footer &ndash; File List',
                                     props: ['color', 'font-family', 'font-size', 'font-weight']
                                 },
                                 'div#content tfoot .total-heading': {
