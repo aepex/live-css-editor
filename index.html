@@ -21,9 +21,10 @@
     <body>
         <div class="page-header" style="margin-left:20px">
             <h1>Pancake Themer <small>Customize your pancake design</small></h1>
-            <p>This tool helps make basic style adjustments to Pancake's default theme. It hasn't been tested much, so use at your own risk!</p>
+            <p>This tool helps make basic style adjustments to Pancake's default theme. It hasn't been tested much, so use at your own risk! <br>
+            Customize your design using the controls below, then click the Get CSS button and copy the code into Pancake's Frontend CSS box. <a href="https://github.com/aepex/pancake-themer">Source on GitHub</a>.</p>
             <button class="btn btn-primary" role="button" id="cssBtn">Get CSS</button><br>
-            <textarea id="output" style="width:98%; font-family:Consolas; font-size:11px; height:100px; overflow:auto; display:none"></textarea>
+            <textarea id="output" style="width:98%; font-family:Consolas, monospace; font-size:11px; height:100px; overflow:auto; display:none"></textarea>
         </div>        
         <div class="container-fluid" id="lce"></div>
         <script>
@@ -33,13 +34,17 @@
                         'demo/invoice.html': {
                             name: 'Invoice Page',
                             def: {
-                                '.paidon': {
+                                'div#content a, div#content .payment-plan a': {
+                                    name: 'Link Color',
+                                    props: ['color']
+                                },
+                                '.invoice .paidon': {
                                     name: 'Payment Status',
                                     props: ['color', 'font-family', 'font-size']
                                 },
                                 '#invoice-details-holder h2': {
                                     name: 'Header &ndash; INVOICE',
-                                    props: ['color', 'font-family', 'font-size', 'margin-top', 'margin-bottom', 'text-transform']
+                                    props: ['color', 'font-family', 'font-size', 'font-weight', 'margin-top', 'margin-bottom', 'text-transform']
                                 },
                                 '#invoice-details-holder p': {
                                     name: 'Header &ndash; Text',
@@ -67,7 +72,7 @@
                                 },
                                 'div#content table thead th': {
                                     name: 'Table Column Headers',
-                                    props: ['color', 'font-family', 'font-size']
+                                    props: ['color', 'font-family', 'font-size', 'font-weight']
                                 },
                                 'div#content tr.invoice-desc-row': {
                                     name: 'Line Item &ndash; Row',
@@ -97,13 +102,9 @@
                                     name: 'Line Item &ndash; Total',
                                     props: ['color', 'font-family', 'font-size', 'font-weight']
                                 },
-                                'div#content .invoice-item-notes td': {
+                                'div#content tr.invoice-item-notes td': {
                                     name: 'Line Item &ndash; Notes',
                                     props: ['color', 'font-family', 'font-size', 'text-indent', 'background-color']
-                                },
-                                '#payment-plan-header': {
-                                    name: 'Payment Plan &ndash; Header',
-                                    props: ['color', 'font-family', 'font-size', 'font-weight']
                                 },
                                 '.payment-plan': {
                                     name: 'Payment Plan &ndash; Base Text',
@@ -113,11 +114,7 @@
                                     name: 'Payment Plan &ndash; Amount &amp; Due Date',
                                     props: ['color', 'font-weight']
                                 },
-                                'div#content .payment-plan a': {
-                                    name: 'Payment Plan &ndash; Links',
-                                    props: ['color']
-                                },
-                                'div#content tfoot h2, div#content tfoot h3': {
+                                'div#content tfoot .invoice-notes h2, div#content tfoot .invoice-notes h3, div#content tfoot h2': {
                                     name: 'Footer &ndash; Headers',
                                     props: ['color', 'font-family', 'font-size', 'font-weight']
                                 },
@@ -155,7 +152,7 @@
                 });
                 $('#cssBtn').click(function() {
                     $('#output').val($('#lce').livecsseditor('getCss'));
-                    $('#output').val($('#output').val() + 'h2.orange {color:' + $('#properties-17 .property-list .prop-index-0 input').val() + ' !important;}'); // Override !important CSS on '.orange'
+                    $('#output').val($('#output').val() + 'h2.orange {color:' + $('#properties-20 .property-list .prop-index-0 input').val() + ' !important;}'); // Override !important CSS on '.orange'
                     $('#output').slideDown();
                 });
             });
