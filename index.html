@@ -38,8 +38,8 @@
                                     name: 'Link Color',
                                     props: ['color']
                                 },
-                                '.invoice .paidon': {
-                                    name: 'Payment Status',
+                                '.invoice .paidon, .button-bar-text': {
+                                    name: 'Top Info Area',
                                     props: ['color', 'font-family', 'font-size']
                                 },
                                 '#invoice-details-holder h2': {
@@ -144,6 +144,47 @@
                                 },
                                 'div#content tfoot td.invoice-due-on': {
                                     name: 'Due Date',
+                                    props: ['color', 'font-family', 'font-size', 'font-weight']
+                                }
+                            }
+                        },
+                        'demo/kitchen.html': {
+                            name: 'Client Area',
+                            def: {
+                                '#content h1': {
+                                    name: 'Header (H1)',
+                                    props: ['color', 'font-family', 'font-size', 'font-weight']
+                                },
+                                '#content h2': {
+                                    name: 'Header (H2)',
+                                    props: ['color', 'font-family', 'font-size', 'font-weight', 'text-transform']
+                                },
+                                '#content .account_totals': {
+                                    name: 'Account Totals',
+                                    props: ['color', 'font-family', 'font-size', 'font-weight']
+                                },
+                                '#latest_invoice': {
+                                    name: 'Latest Invoice Box',
+                                    props: ['width', 'padding', 'border', 'background-color', 'border-radius']
+                                },
+                                '#latest_invoice h4': {
+                                    name: 'Latest Invoice &ndash; Title',
+                                    props: ['color', 'font-family', 'font-size', 'font-weight', 'text-transform']
+                                },
+                                '#latest_invoice h3': {
+                                    name: 'Latest Invoice &ndash; Inv. Number',
+                                    props: ['color', 'font-family', 'font-size', 'font-weight', 'text-transform']
+                                },
+                                '#latest_invoice p': {
+                                    name: 'Latest Invoice &ndash; Text',
+                                    props: ['color', 'font-family', 'font-size', 'font-weight']
+                                },
+                                '#kitchen-invoices tbody tr.items-desc-row': {
+                                    name: 'Invoice Table &ndash; Rows',
+                                    props: ['background-color', 'height']
+                                },
+                                '#kitchen-invoices tbody tr.items-desc-row td': {
+                                    name: 'Invoice Table &ndash; Text',
                                     props: ['color', 'font-family', 'font-size', 'font-weight']
                                 }
                             }
