@@ -22,7 +22,8 @@
         <div class="page-header" style="margin-left:20px">
             <h1>Pancake Themer <small>Customize your pancake design</small></h1>
             <p>This tool helps make basic style adjustments to Pancake's default theme. It hasn't been tested much, so use at your own risk! <br>
-            Customize your design using the controls below, then click the Get CSS button and copy the code into Pancake's Frontend CSS box. <a href="https://github.com/aepex/pancake-themer">Source on GitHub</a>.</p>
+            Customize your design using the controls below, then click the Get CSS button and copy the code into Pancake's Frontend CSS box. <br>
+            Some controls affect multiple pages, so be sure to look at each page using the "Current Page" dropdown menu. <a href="https://github.com/aepex/pancake-themer" target="_blank">Source on GitHub</a>.</p>
             <button class="btn btn-primary" role="button" id="cssBtn">Get CSS</button><br>
             <textarea id="output" style="width:98%; font-family:Consolas, monospace; font-size:11px; height:100px; overflow:auto; display:none"></textarea>
         </div>        
@@ -151,39 +152,39 @@
                         'demo/kitchen.html': {
                             name: 'Client Area',
                             def: {
-                                '#content h1': {
+                                '.kitchen #content h1': {
                                     name: 'Header (H1)',
-                                    props: ['color', 'font-family', 'font-size', 'font-weight']
+                                    props: ['color', 'font-family', 'font-size', 'font-weight', 'padding-right']
                                 },
-                                '#content h2': {
+                                '.kitchen #content h2': {
                                     name: 'Header (H2)',
-                                    props: ['color', 'font-family', 'font-size', 'font-weight', 'text-transform']
+                                    props: ['color', 'font-family', 'font-size', 'font-weight', 'text-transform', 'border-top-color', 'border-bottom-color']
                                 },
-                                '#content .account_totals': {
+                                '.kitchen #content .account_totals': {
                                     name: 'Account Totals',
                                     props: ['color', 'font-family', 'font-size', 'font-weight']
                                 },
-                                '#latest_invoice': {
+                                '.kitchen #latest_invoice': {
                                     name: 'Latest Invoice Box',
-                                    props: ['width', 'padding', 'border', 'background-color', 'border-radius']
+                                    props: ['width', 'padding', 'background-color', 'border-width', 'border-color', 'border-style', 'border-radius']
                                 },
-                                '#latest_invoice h4': {
+                                '.kitchen #latest_invoice h4': {
                                     name: 'Latest Invoice &ndash; Title',
                                     props: ['color', 'font-family', 'font-size', 'font-weight', 'text-transform']
                                 },
-                                '#latest_invoice h3': {
+                                '.kitchen #latest_invoice h3': {
                                     name: 'Latest Invoice &ndash; Inv. Number',
                                     props: ['color', 'font-family', 'font-size', 'font-weight', 'text-transform']
                                 },
-                                '#latest_invoice p': {
+                                '.kitchen #latest_invoice p': {
                                     name: 'Latest Invoice &ndash; Text',
                                     props: ['color', 'font-family', 'font-size', 'font-weight']
                                 },
-                                '#kitchen-invoices tbody tr.items-desc-row': {
+                                '.kitchen #kitchen-invoices tbody tr.items-desc-row': {
                                     name: 'Invoice Table &ndash; Rows',
                                     props: ['background-color', 'height']
                                 },
-                                '#kitchen-invoices tbody tr.items-desc-row td': {
+                                '.kitchen #kitchen-invoices tbody tr.items-desc-row td': {
                                     name: 'Invoice Table &ndash; Text',
                                     props: ['color', 'font-family', 'font-size', 'font-weight']
                                 }
