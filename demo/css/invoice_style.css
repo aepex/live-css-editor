@@ -60,7 +60,8 @@ p {
     z-index: 4;
     top:0;
     left:0;
-    background:#F3F6F9 url('../img/bg-btn-bar.gif') repeat-x;
+    /*background:#F3F6F9 url('../img/bg-btn-bar.gif') repeat-x;*/
+    background-color:#F3F6F9;
     color: #515151;
     font-family: Arial;
     font-size: 15px;
