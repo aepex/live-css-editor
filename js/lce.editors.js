@@ -171,7 +171,7 @@
      });
 
     //border-style
-    $.fn.livecsseditor.setPropertyEditor(['border-style'], function positionEditorCallback(options) {
+    $.fn.livecsseditor.setPropertyEditor(['border-style','border-top-style','border-left-style','border-right-style','border-bottom-style'], function positionEditorCallback(options) {
         var html = '<form class="form-inline"><select><option value="none">none</option><option value="dotted">dotted</option><option value="dashed">dashed</option><option value="solid">solid</option></select><a class="btn" href="#"><i class=" icon-ok"></i></a></form>';
         options.container.html(html);
         options.container.find('select').val(options.value);

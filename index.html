@@ -53,11 +53,15 @@
                                 },
                                 '#company-info-holder h2': {
                                     name: 'Your Company Name',
-                                    props: ['color', 'font-family', 'font-size']
+                                    props: ['color', 'font-family', 'font-size', 'margin-bottom']
                                 },
                                 '#company-info-holder p': {
                                     name: 'Your Address',
-                                    props: ['color', 'font-family', 'font-size'],
+                                    props: ['color', 'font-family', 'font-size', 'margin-bottom']
+                                },
+                                '#clientInfo': {
+                                    name: 'Billing Info',
+                                    props: ['padding-top', 'padding-bottom']
                                 },
                                 'div#clientInfo div#billing-info table#billing-table h2': {
                                     name: 'Billing Info &ndash; Company Name',
@@ -114,6 +118,10 @@
                                 '.payment-plan .amount, .payment-plan .dueon': {
                                     name: 'Payment Plan &ndash; Amount &amp; Due Date',
                                     props: ['color', 'font-weight']
+                                },
+                                'div#content table tfoot tr.Im-sorry-for-this td div.really-I-am': {
+                                    name: 'Footer &ndash; Divider',
+                                    props: ['border-top-width', 'border-top-color', 'border-top-style', 'margin-top', 'margin-bottom']
                                 },
                                 'div#content tfoot .invoice-notes h2, div#content tfoot .invoice-notes h3, div#content tfoot h2': {
                                     name: 'Footer &ndash; Headers',
@@ -174,7 +182,7 @@
                                 },
                                 '.kitchen #latest_invoice h3': {
                                     name: 'Latest Invoice &ndash; Inv. Number',
-                                    props: ['color', 'font-family', 'font-size', 'font-weight', 'text-transform']
+                                    props: ['color', 'font-family', 'font-size', 'font-weight', 'text-transform', 'margin-top', 'margin-bottom', 'border-bottom-color', 'border-bottom-width', 'border-bottom-style']
                                 },
                                 '.kitchen #latest_invoice p': {
                                     name: 'Latest Invoice &ndash; Text',
@@ -194,7 +202,7 @@
                 });
                 $('#cssBtn').click(function() {
                     $('#output').val($('#lce').livecsseditor('getCss'));
-                    $('#output').val($('#output').val() + 'h2.orange {color:' + $('#properties-20 .property-list .prop-index-0 input').val() + ' !important;}'); // Override !important CSS on '.orange'
+                    $('#output').val($('#output').val() + 'h2.orange {color:' + $('#properties-22 .property-list .prop-index-0 input').val() + ' !important;}'); // Override !important CSS on '.orange'
                     $('#output').slideDown();
                 });
             });
