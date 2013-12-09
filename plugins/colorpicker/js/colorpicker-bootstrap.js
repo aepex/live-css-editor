@@ -240,7 +240,9 @@
 			var offset = this.component ? this.component.offset() : this.element.offset();
 			this.picker.css({
 				top: offset.top + this.height,
-				left: offset.left
+				left: offset.left - 90,
+				minWidth: 122,
+				padding: 4
 			});
 		},
 		
@@ -345,7 +347,7 @@
 		}
 	}
 
-	$.fn.colorpicker = function ( option ) {
+	$.fn.colorpicker = function ( option, val ) {
 		return this.each(function () {
 			var $this = $(this),
 				data = $this.data('colorpicker'),
@@ -353,7 +355,7 @@
 			if (!data) {
 				$this.data('colorpicker', (data = new Colorpicker(this, $.extend({}, $.fn.colorpicker.defaults,options))));
 			}
-			if (typeof option === 'string') data[option]();
+			if (typeof option === 'string') data[option](val);
 		});
 	};
 
