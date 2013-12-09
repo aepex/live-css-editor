@@ -35,7 +35,7 @@
                         'demo/invoice.html': {
                             name: 'Invoice Page',
                             def: {
-                                'div#content a, div#content .payment-plan a': {
+                                'div#content a:not(#latest_invoice), div#content .payment-plan a': {
                                     name: 'Link Color',
                                     props: ['color']
                                 },
