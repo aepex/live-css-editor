@@ -128,6 +128,11 @@
 
     //font-weight
     $.fn.livecsseditor.setPropertyEditor(['font-weight'], function positionEditorCallback(options) {
+        if(options.value == 400) {
+            options.value = "normal";
+        } else if(options.value == 700) {
+            options.value = "bold";
+        }
         var html = '<form class="form-inline"><select><option value="normal">normal</option><option value="bold">bold</option></select><a class="btn" href="#"><i class=" icon-ok"></i></a></form>';
         options.container.html(html);
         options.container.find('select').val(options.value);
