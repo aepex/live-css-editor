@@ -131,6 +131,17 @@
         });     
     });
 
+    //float
+    $.fn.livecsseditor.setPropertyEditor(['float'], function positionEditorCallback(options) {
+        var html = '<form class="form-inline"><select><option value="none">&lt;none&gt;</option><option value="left">left</option><option value="right">right</option></select><a class="btn" href="#"><i class=" icon-ok"></i></a></form>';
+        options.container.html(html);
+        options.container.find('select').val(options.value);
+        options.container.find('a.btn').click(function() {
+            options.setValue(options.container.find('select').val());
+            return false;
+        });
+     });
+
     //font-weight
     $.fn.livecsseditor.setPropertyEditor(['font-weight'], function positionEditorCallback(options) {
         if(options.value == 400) {
@@ -139,6 +150,17 @@
             options.value = "bold";
         }
         var html = '<form class="form-inline"><select><option value="normal">normal</option><option value="bold">bold</option></select><a class="btn" href="#"><i class=" icon-ok"></i></a></form>';
+        options.container.html(html);
+        options.container.find('select').val(options.value);
+        options.container.find('a.btn').click(function() {
+            options.setValue(options.container.find('select').val());
+            return false;
+        });
+     });
+
+    //font-style
+    $.fn.livecsseditor.setPropertyEditor(['font-style'], function positionEditorCallback(options) {
+        var html = '<form class="form-inline"><select><option value="inherit">&lt;inherit default&gt;</option><option value="normal">normal</option><option value="italic"><em>italic</em></option></select><a class="btn" href="#"><i class=" icon-ok"></i></a></form>';
         options.container.html(html);
         options.container.find('select').val(options.value);
         options.container.find('a.btn').click(function() {
