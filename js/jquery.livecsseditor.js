@@ -143,14 +143,16 @@
                 //mark selected selector
                 properties.find('.collapse').on('show', function () {
                     var selected = preview.contents().find($(this).data('selector'));
-                    var selectedBgColor = selected.css('background-color');
-                    selected.animate({'background-color':'yellow'},800,function(){
-                        $(this).animate({'background-color':selectedBgColor},400);
-                    });
+                    if(selected.selector != '#lcePreview.contents() #content .notice span') { // Don't highlight status updates, causes display issues
+                        var selectedBgColor = selected.css('background-color');
+                        selected.animate({'background-color':'yellow'},800,function(){
+                            $(this).animate({'background-color':selectedBgColor},400);
+                        });
+                    }
                 });
-            });            
-        })
-    }    
+            });
+        });
+    }
     
     var tpls = {};
 
