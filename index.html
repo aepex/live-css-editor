@@ -19,11 +19,14 @@
         <script src="plugins/jquery-ui-1.9.1/js/jquery-ui-1.9.1.custom.min.js"></script>
     </head>
     <body>
-        <div class="page-header" style="margin-left:20px">
-            <h1>Pancake Themer <small>Customize your pancake design</small></h1>
-            <p>This tool helps make basic style adjustments to Pancake's default theme. It hasn't been tested much, so use at your own risk! <br>
-            Customize your design using the controls below, then click the Get CSS button and copy the code into Pancake's Frontend CSS box. <br>
-            Some controls affect multiple pages, so be sure to look at each page using the "Current Page" dropdown menu. <a href="https://github.com/aepex/pancake-themer" target="_blank">Source on GitHub</a>.</p>
+        <div class="page-header" style="margin:20px">
+            <div class="pull-right" style="color:#999">Last Updated: Dec. 27, 2013<br> <a href="https://github.com/aepex/pancake-themer" target="_blank">Info &amp; source code on GitHub</a></div>
+            <header>
+                <h1>Pancake Themer <small>Customize your pancake design</small></h1>
+                <p>This tool helps make basic style adjustments to Pancake's default theme. It hasn't been tested much, so use at your own risk! <br>
+                Customize your design using the controls below, then click the Get CSS button and copy the code into Pancake's Frontend CSS box. <br>
+                Some controls affect multiple pages, so be sure to look at each page using the "Current Page" dropdown menu. <a href="javascript:$('header').slideUp();">Hide this header.</a></p>
+            </header>
             <button class="btn btn-primary" role="button" id="cssBtn">Get CSS</button><br>
             <textarea id="output" style="width:98%; font-family:Consolas, monospace; font-size:11px; height:100px; overflow:auto; display:none"></textarea>
         </div>        
@@ -168,6 +171,10 @@
                                     name: 'Header (H2)',
                                     props: ['color', 'font-family', 'font-size', 'font-weight', 'text-transform', 'border-top-color', 'border-bottom-color']
                                 },
+                                '.kitchen #content h3': {
+                                    name: 'Header (H3)',
+                                    props: ['color', 'font-family', 'font-size', 'font-weight', 'text-transform', 'margin-top', 'margin-bottom', 'border-bottom-color', 'border-bottom-width', 'border-bottom-style']
+                                },
                                 '.kitchen #content .account_totals': {
                                     name: 'Account Totals',
                                     props: ['color', 'font-family', 'font-size', 'font-weight']
@@ -180,10 +187,6 @@
                                     name: 'Latest Invoice &ndash; Title',
                                     props: ['color', 'font-family', 'font-size', 'font-weight', 'text-transform']
                                 },
-                                '.kitchen #latest_invoice h3': {
-                                    name: 'Latest Invoice &ndash; Inv. Number',
-                                    props: ['color', 'font-family', 'font-size', 'font-weight', 'text-transform', 'margin-top', 'margin-bottom', 'border-bottom-color', 'border-bottom-width', 'border-bottom-style']
-                                },
                                 '.kitchen #latest_invoice p': {
                                     name: 'Latest Invoice &ndash; Text',
                                     props: ['color', 'font-family', 'font-size', 'font-weight']
@@ -195,6 +198,35 @@
                                 '.kitchen #kitchen-invoices tbody tr.items-desc-row td': {
                                     name: 'Invoice Table &ndash; Text',
                                     props: ['color', 'font-family', 'font-size', 'font-weight']
+                                }
+                            }
+                        },
+                        'demo/tickets.html': {
+                            name: 'Support Tickets (v4)',
+                            def: {
+                                '#content table .ticket td': {
+                                    name: 'Ticket Row',
+                                    props: ['color', 'font-family', 'font-size']
+                                },
+                                '#content .ticketconvo .image img': {
+                                    name: 'Conversation Avatar',
+                                    props: ['display']
+                                },
+                                '#content .ticketconvo .text': {
+                                    name: 'Conversation Box',
+                                    props: ['float', 'width', 'margin-right']
+                                },
+                                '#content .ticketconvo .text h4': {
+                                    name: 'Conversation Name',
+                                    props: ['color', 'font-family', 'font-size', 'font-weight']
+                                },
+                                '#content .ticketconvo .text p': {
+                                    name: 'Conversation Text',
+                                    props: ['color', 'font-family', 'font-size']
+                                },
+                                '#content .notice span': {
+                                    name: 'Status Update',
+                                    props: ['font-family', 'font-size', 'font-style', 'border-radius']
                                 }
                             }
                         }

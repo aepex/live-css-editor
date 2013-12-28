@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+
+<head>
+    <title>Client Access Area | Your Company</title>
+    <link rel="shortcut icon" href="" />
+    <meta name="robots" content="noindex,nofollow" />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <link media="all" rel="stylesheet" type="text/css" href="css/kitchen_style.css" />
+    <link href='http://fonts.googleapis.com/css?family=Cabin:400,700&amp;subset=latin&amp;v2' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Copse&amp;subset=latin&amp;v2' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+</head>
+
+
+<body class="kitchen admin">
+    <div id="buttonBar">
+        <div id="buttonHolders">
+            <a href="#" class="button active">Support Tickets</a>
+            <a href="#" class="button ">Dashboard</a>              
+            <span class="button-bar-text ">Your Company - Client Access Area</span>
+        </div><!-- /buttonHolders -->
+    </div><!-- /buttonBar -->
+    
+    <div id="wrapper">
+        <div class="header-area"></div><!-- /header-area end -->
+
+        <div id="content">
+            <h1>Bill McClient<br>Support Tickets</h1>
+    
+            <noscript>
+                <style type="text/css">
+                    .btn-new-ticket{display:none;}
+                </style>
+            </noscript>
+    
+            <div id="ticket-body" class="eight columns new-ticket-from" style="padding:5px;background-color:#eee;border-radius:5px;display:none;">
+                <div id="ticket-create" >
+
+            <div class="help">
+                <h3>Submit a Ticket</h3>
+            </div> <br />
+
+            <form action="#" method="post" accept-charset="utf-8" class="form-holder row">
+                <div class="twelve columns">
+                    <label for="subject" style="width:20%;">Ticket Subject</label>
+                    <input type="text" id="subject" name="subject" style="padding:6px;border-radius:5px;border:1px solid #ccc;width:53%;margin-left:30px;margin-bottom:10px;">
+                </div>
+
+                <div class="twelve columns" style="margin-bottom:10px;">
+                    <label for="message" style="display:inline-block;vertical-align:top;">Ticket Message</label>
+                    <div class="textarea ticket" style="display:inline-block;width:54%;height:100px;margin-left:23px;">
+                        <textarea name="message" cols="55" rows="10" id="message" style="display:inline-block;width:100%;"></textarea>
+                    </div>
+                </div>
+
+                <div class="six columns" style="margin-bottom:10px;">
+                    <label for="priority" style="width:20%;">Ticket Priority</label>
+                    <span class="sel-item">
+                        <select name="priority_id" style="width:54%;margin-left:33px;" class="sel_priority">
+                            <option value="0" selected="selected">-- No priority --</option>
+                            <option value="1">Normal</option>
+                            <option value="2">Elevated</option>
+                            <option value="3">Urgent</option>
+                        </select>
+                    </span>
+                </div>
+
+                <div class="six columns end" style="margin-bottom:10px;">
+                    <label for="status" style="width:20%;">Ticket Status</label>
+                    <span class="sel-item">
+                        <select name="status_id" style="width:54%;margin-left:38px;">
+                            <option value="0" selected="selected">-- No status --</option>
+                            <option value="1">Pending</option>
+                            <option value="2">Open</option>
+                            <option value="3">Closed</option>
+                        </select>
+                    </span>
+                </div>
+                
+                <div class="twelve columns">
+                    <input type="submit" id="submit" class="blue-btn" value="Add Ticket" style="width:15%;" onclick="return false;">
+                    <input type="button" class="cancel" value="Cancel" style="width:15%;" onclick="return false;">
+                </div>
+            </form>
+        </div>
+    </div>
+    <h2>Active Tickets</h2>
+    <table id="kitchen-invoices"  class="kitchen-table" cellpadding="0" cellspacing="0">
+        <thead>
+            <tr>
+                <th style="width:8%">Status</th>
+                <th style="width:8%">Priority</th>  
+                <th style="width:36%">Subject</th>  
+                <th style="width:12%">Created</th>
+                <th style="width:12%">Updated</th>
+                <th style="width:11%">Responses</th>
+                <th style="width:11%"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="ticket medium">
+                <td style="width:6%"><span class="open" style="background-color: #88ce5c"></span>Open</td>
+                <td style="width:6%">Urgent</td>
+                <td style="width:36%">Broken Links</td>
+                <td style="width:12%">0 Second ago</td>
+                <td style="width:12%">0 Second ago</td>
+                <td style="width:11%">0 Responses</td>
+                <td style="width:11%"><a href="#">View Conversation</a></td>
+            </tr>
+            <tr class="ticket medium">
+                <td style="width:6%"><span class="open" style="background-color: #9a9a9a"></span>Closed</td>
+                <td style="width:6%">Normal</td>
+                <td style="width:36%">Logo Size</td>
+                <td style="width:12%">0 Second ago</td>
+                <td style="width:12%">0 Second ago</td>
+                <td style="width:11%">1 Responses</td>
+                <td style="width:11%"><a href="#">View Conversation</a></td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <h2>Logo Size</h2>
+    <div class="ticketconvo left">
+        <div class="image">
+            <img src="images/avatar.png" />
+        </div>
+        <div class="text">
+            <h4>Your Company</h4>
+            <p><p>The logo isn't big enough. Make it bigger. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, voluptate praesentium iste saepe vitae. Ipsam, doloremque, aliquid, doloribus harum rem tenetur ex at similique ad nisi provident pariatur vero quas vel sequi eius laudantium impedit dignissimos laborum distinctio necessitatibus itaque ut incidunt magnam possimus! Consequuntur, ab dolorem repellendus quidem vitae!</p></p>
+        </div>
+    </div>
+    
+    <br class="clear" />
+    <br />
+    <div class="notice" style="border-bottom: 1px solid #41b8e3;">
+        <div><span style="background: #41b8e3; color: #ffffff;">Your Company updated the ticket status to <strong>Pending</strong> on 12/21/2013 at 2:48pm</span></div>
+    </div>
+    
+    <div class="notice" style="border-bottom: 1px solid #88ce5c;">
+        <div><span style="background: #88ce5c; color: #ffffff;">Your Company updated the ticket status to <strong>Open</strong> on 12/21/2013 at 2:50pm</span></div>
+    </div>
+        
+    <div class="ticketconvo left">
+        <div class="image">
+            <img src="images/avatar.png" />
+        </div>
+        <div class="text">
+            <h4>Your Company</h4>
+            <p><p>Made the logo bigger. It covers everything else on the page, but that's okay.</p></p>
+        </div>
+    </div>
+    <br class="clear" />
+    <br />
+    
+    <div class="notice" style="border-bottom: 1px solid #9a9a9a;">
+        <div><span style="background: #9a9a9a; color: #ffffff;">Your Company updated the ticket status to <strong>Closed</strong> on 12/21/2013 at 2:53pm</span></div>
+    </div>
+        
+    <h3>Leave a Response</h3><br/>
+    <div class="ticketconvo">
+        <form action="#" method="post" accept-charset="utf-8">
+            <textarea name="message" style="width: 100%; height: 130px; margin-bottom: 10px;"></textarea> <br />
+            <div class="six columns end" style="margin-bottom:10px;">
+                <label for="status" style="width:20%;">Ticket Status</label>
+                <span class="sel-item">
+                    <select name="status_id" style="width:54%;margin-left:38px;">
+                        <option value="0">-- No status --</option>
+                        <option value="1">Pending</option>
+                        <option value="2">Open</option>
+                        <option value="3" selected="selected">Closed</option>
+                    </select>
+                </span>
+            </div>
+            <input type="submit" class="submit" value="Update Ticket" onclick="return false;">
+        </form>
+    </div>
+</div>
+
+<div id="footer"></div><!-- /footer -->
+
+</div><!-- /wrapper -->
+</body>
+</html>
