@@ -20,8 +20,8 @@
         if(options == 'getCss'){
             opts = self.data('opts');
             var pagePath = null;
-            if(params && params['pagePath']){
-                pagePath = params['pagePath'];
+            if(params && params.pagePath){
+                pagePath = params.pagePath;
             }
             return getCss(pagePath);
         }
@@ -43,7 +43,7 @@
                 loadPage(pagePath);
                 //on change page
                 inspector.find('#lcePages').change(function(){
-                    loadPage($(this).val())
+                    loadPage($(this).val());
                 });
             }); 
         });               
@@ -63,15 +63,15 @@
                 for(var i = 0; i < props[propSelector].props.length; i++){
                     var prop = props[propSelector].props[i];
                     if(props[propSelector].values[prop]){
-                        selectorCss += prop + ':' + props[propSelector].values[prop] + '; '
+                        selectorCss += prop + ':' + props[propSelector].values[prop] + '; ';
                     }
                 }
-                if(selectorCss != ''){
+                if(selectorCss !== ''){
                     css += propSelector + '{' + selectorCss + "}\n";
                 }
             }
             return css;
-        }
+        };
         if(pagePath){
             css += cssForPage(opts.pages[pagePath].def);
         }
@@ -215,7 +215,7 @@
         else{
             propEditors[property] = editorCallback;
         }        
-    }  
+    };  
 
     
     

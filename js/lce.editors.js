@@ -5,7 +5,7 @@
  */
 (function(){
     function defaultEditorCallback(options){
-        var html = '<form class="form-inline"><input type="text" value="" /><a class="btn" href="#"><i class=" icon-ok"></i></a></form>'
+        var html = '<form class="form-inline"><input type="text" value="" /><a class="btn" href="#"><i class=" icon-ok"></i></a></form>';
         options.container.html(html);
         options.container.find('input').val(options.value);
         options.container.find('a.btn').click(function(){
