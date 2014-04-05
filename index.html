@@ -20,7 +20,7 @@
     </head>
     <body>
         <div class="page-header" style="margin:20px">
-            <div class="pull-right" style="color:#999">Last Updated: Dec. 27, 2013<br> <a href="https://github.com/aepex/pancake-themer" target="_blank">Info &amp; source code on GitHub</a></div>
+            <div class="pull-right" style="color:#999">Last Updated: April 5, 2014<br> <a href="https://github.com/aepex/pancake-themer" target="_blank">Info &amp; source code on GitHub</a></div>
             <header>
                 <h1>Pancake Themer <small>Customize your pancake design</small></h1>
                 <p>This tool helps make basic style adjustments to Pancake's default theme. It hasn't been tested much, so use at your own risk! <br>
@@ -52,7 +52,23 @@
                                 },
                                 '#invoice-details-holder p': {
                                     name: 'Header &ndash; Text',
-                                    props: ['color', 'font-family', 'font-size']
+                                    props: ['color', 'font-family', 'font-size', 'text-transform']
+                                },
+                                '#invoice-details-holder .date': {
+                                    name: 'Header &ndash; Invoice Date',
+                                    props: ['color', 'font-weight', 'margin-top', 'display']
+                                },
+                                '#invoice-details-holder .date span': {
+                                    name: 'Header &ndash; Invoice Date Value',
+                                    props: ['color', 'font-weight']
+                                },
+                                '#invoice-details-holder .due-date': {
+                                    name: 'Header &ndash; Due Date',
+                                    props: ['color', 'font-weight', 'margin-top', 'display']
+                                },
+                                '#invoice-details-holder .due-date span': {
+                                    name: 'Header &ndash; Due Date Value',
+                                    props: ['color', 'font-weight']
                                 },
                                 '#company-info-holder h2': {
                                     name: 'Your Company Name',
