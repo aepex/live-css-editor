@@ -21,7 +21,9 @@
         if(options.prop == "background") {
             // Only return the actual color value of the 'background' property
             var regex = /rgba?\(.*\)|#[0-9A-Fa-f]{3,6}/.exec(options.value);
-            options.value = regex[0];
+            if (regex != null) {
+                options.value = regex[0];
+            }
         }
         var html = '<form class="form-inline"><div class="input-append color" data-color="' + options.value + '" data-color-format="rgb"><input type="text" value="' + options.value + '" /><span class="add-on"><i style="background-color: ' + options.value + '"></i></span></div><a class="btn" href="#"><i class=" icon-ok"></i></a></form>';
         options.container.html(html);
